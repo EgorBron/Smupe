@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+a {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.nav-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90%;
+}
+
+.main-header {
+  word-wrap: normal;
+  text-align: start;
+  line-height: 5.5rem;
+  max-width: 40rem;
+  background: linear-gradient( 60deg, #735eab, #ff5555 );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 2rem;
+}
+
+.material-card {
+  border-radius: 4rem;
+  background-color: #e6deeb;
+  padding: 4rem;
+  min-height: 30rem;
+}
+
+.material-button {
+  border-radius: 4rem;
+  background-color: #6650a4;
+  color: white;
+  padding: 1rem;
+  padding-inline: 2rem;
+  font-weight: 800;
+}
+
+.material-primary {
+  background-color: #6650a4;
+  color: white;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.wave {
+  background: linear-gradient(135deg,#230069, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #9660f3, #a600ff) fixed;
+  --mask: radial-gradient(calc(3.84vh + 3px) at 50% calc(100% + 2.40vh),#0000 calc(99% - 6px),#000 calc(101% - 6px) 99%,#0000 101%) calc(50% - 6vh) calc(50% - 1.5vh - 3px + .5px)/12vh calc(3vh + 6px) repeat-x, radial-gradient(calc(3.84vh + 3px) at 50% -2.4vh,#0000 calc(99% - 6px),#000 calc(101% - 6px) 99%,#0000 101%) 50% calc(50% + 1.5vh + 3px)/12vh calc(3vh + 6px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  height: 3rem;
+}

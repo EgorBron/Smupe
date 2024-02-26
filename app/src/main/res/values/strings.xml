@@ -1,0 +1,41 @@
+<resources>
+    <!-- # General # -->
+    <!-- App title, should not be translated -->
+    <string name="app_name" translatable="false">Smupe!</string>
+    <!-- Copyright -->
+    <string name="copyright_footer">Apache License 2.0 © 2024 Egor Bron</string>
+
+    <string name="dismiss_dialog">Dismiss</string>
+    <string name="apply_action">OK</string>
+    <string name="remove_action">Remove</string>
+
+    <string name="send_image_dialog">Send Image</string>
+    <string name="send_image_dialog_subject">Smupe! Image</string>
+    <string name="send_image_dialog_message">"Look what I found in Smupe! "</string>
+
+    <string name="error_no_internet_connection">No internet connection</string>
+
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="open_in_browser">Open it</string>
+    <string name="favorite">Favorite</string>
+    <string name="switch_api_def">Switch API-DEFs</string>
+
+    <string name="msg_fetching">Fetching, please wait…</string>
+    <string name="msg_downloading">Downloading…</string>
+    <string name="msg_failed_download">Failed to download…</string>
+    <string name="done">Done!</string>
+    <string name="missing_permissions">Not all permissions granted</string>
+    <string name="share_dialog">Look what I found in {app}\n{link}</string>
+    <string name="well_that_s_a_bug">Well, that\'s a bug!</string>
+    <string name="unhandled_error_dialog_message">Our Kitty the Bugcatcher found a bug! He is so angry!\nWe really didn\'t expect that, so please report about it to us! Make Kitty happy!</string>
+    <string name="error_represent">%1$s: error.</string>
+    <string name="type_something">Type something…</string>
+    <string name="search_in_current_api">Search in current API</string>
+    <string name="list_of_api_definitions">List of API Definitions</string>
+    <string name="swipe_tip">Swipe to get next image</string>
+    <string name="add_api_type_of_api">What type of API do you want to add?</string>
+    <string name="add_api_remote_api">Remote (Internet) API</string>
+    <string name="add_api_local_directory">Local directory</string>
+    <string name="add_new_api">Add new API</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Title of Settings screen and card -->
+    <string name="settings_title">Settings</string>
+    <!-- Description for Settings card -->
+    <string name="settings_menu_description">Open settings menu</string>
+
+    <string name="settings_theme_and_colors">Theme and colors</string>
+    <string name="settings_light_theme">Light</string>
+    <string name="settings_dark_theme">Dark</string>
+    <string name="settings_system_theme">As in system</string>
+    <string name="settings_dynamic_theme">Dynamic color</string>
+    <string name="settings_menu_elements_order">Menu elements order</string>
+    <string name="settings_action_swipe_to_save">Action swipe to save</string>
+    <string name="settings_action_swipe_to_save_description">Action swipe will save resource instead of invoking menu</string>
+    <string name="settings_auto_saves">Auto saves</string>
+    <string name="settings_auto_saves_description">Save resource to gallery as it appeared</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_app_controls">App controls</string>
+    <string name="settings_behaviour">Behaviour</string>
+    <string name="settings_app_theme">App theme and colors</string>
+    <string name="settings_app_theme_description">Which theme is preferred to use</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_description">Change app language</string>
+    <string name="settings_show_button_controls">Show button controls</string>
+    <string name="settings_show_button_controls_description">Shows button controls on screen and disables swipe gestures</string>
+    <string name="settings_reverse_image_controls">Reverse image swipes</string>
+    <string name="settings_reverse_image_controls_description">Reverses actions when swiping on image</string>
+    <string name="settings_cache_capacity">Cache capacity (KB)</string>
+    <string name="settings_cache_capacity_description">Image cache capacity in kilobytes</string>
+    <string name="settings_prefer_simple_share">Prefer simple share</string>
+    <string name="settings_prefer_simple_share_description">Prefer simple share (plain text message) instead of file sharing</string>
+    <string name="settings_share_template">Share dialog text</string>
+    <string name="settings_share_template_description">Edit sharing text template</string>
+    <string name="settings_adult_mode">\"Adult\" mode</string>
+    <string name="settings_adult_mode_description">(EXP) Show API-DEFs that marked as restricted to children.</string>
+    <string name="settings_international_mode">\"International\" mode</string>
+    <string name="settings_international_mode_description">(TBD) Show API-DEFs that marked as restricted to certain countries.\nNote: this setting may be removed in future.</string>
+    <string name="settings_proxy_server">Proxy server</string>
+    <string name="settings_proxy_server_description">(TBD) Edit proxy server settings</string>
+    <string name="settings_bump_faves">Data bumping</string>
+    <string name="settings_bump_faves_description">(TBD) Edit content backup behaviour</string>
+    <string name="settings_send_crash_logs">Send crash logs</string>
+    <string name="settings_send_crash_logs_description">(TBD) Allows to manually send crash logs to developer on any critical error</string>
+    <string name="settings_menu_elements_order_description">Edit action menu elements</string>
+    <string name="settings_lock_orientation">Lock orientation</string>
+    <string name="settings_lock_orientation_description">Lock app orientation to portrait.\nWarning! It may cause issues on some screens!</string>
+</resources>

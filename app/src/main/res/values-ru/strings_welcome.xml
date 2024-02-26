@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="swipe_tip">Смахните, чтобы посмотреть следующую картинку</string>
+    <string name="welcome_greeting">Добро пожаловать в Smupe!</string>
+    <string name="welcome_swipe_tip">Смахните влево, чтобы посмотреть следующую картинку</string>
+    <string name="welcome_actions_tip">Смахните влево, чтобы открыть контекстное меню</string>
+    <string name="welcome_favourite_tip">Сделайте двойное нажатие, чтобы добавить картинку в \"Любимое\"</string>
+    <string name="welcome_menu_tip">Кнопки действий отобразятся внизу</string>
+    <string name="welcome_skip">Пропустить</string>
+    <string name="welcome_pager_back">Назад</string>
+    <string name="welcome_pager_next">Далее</string>
+    <string name="welcome_start">Начнём же!</string>
+    <string name="view_3rd_party_licenses">Просмотр сторонних лицензий</string>
+    <string name="view_license">Просмотр лицензии</string>
+    <string name="view_license_file">Просмотреть полный или оригинальный файл лицензии</string>
+    <string name="api_defs_title">Определения API</string>
+    <string name="api_defs_menu_description">Добавление или редактирование источников изображений</string>
+    <string name="favorites_title">Любимое</string>
+    <string name="favorites_menu_description">Открыть меню \"Любимое\"</string>
+    <string name="no_images">Нет изображений!</string>
+    <string name="msg_added_to_favorites">Добавлено в любимое</string>
+    <string name="msg_removed_from_favorites">Удалено из любимого</string>
+    <string name="egg_what">ЧЁ</string>
+    <string name="egg_wait">ПАДАЖЖИ</string>
+    <string name="egg_how">КАК</string>
+    <string name="egg_no_way">НЕВОЗМОЖНО</string>
+    <string name="dumplings">"Привет, любопытный человек! Сегодня ты нашёл что-то классное, обещаю.
+\nТы узнаешь, как приготовить вкусные жареные пельмени!
+\n\n
+Ингредиенты:
+* 300 г пельменей
+* Специи по выбору (черный перец обязателен)
+* Масло для жарки (подсолнечное, оливковое или другое)
+* Сковорода
+\n\nИнструкции:
+* Поставь сковороду на плиту и добавь немного масла. Пока оно нагревается, приготовь соус.
+* Приготовь свой \"особый соус\": смешай перец, соль, травы и любые другие желаемые ингредиенты с небольшим количеством масла.
+* Когда масло нагреется, аккуратно положи пельмени в сковороду. Пусть они готовятся 3 минуты.
+* Равномерно полей пельмени \"особым соусом\", аккуратно перемешивая их.
+* Готовь еще 5-10 минут, в зависимости от размера и толщины пельменей. Меньшие пельмени и тонкое тесто будут готовиться быстрее.
+* Выключи огонь, и твои вкусные пельмени готовы к подаче!
+    </string>
+    <string name="about_title">О приложении</string>
+    <string name="about_menu_description">Прочесть информацию о приложении</string>
+    <string name="credits_created_by">Сделано %1$s с 😺 и 💖</string>
+    <string name="visit_website">Посетить веб-сайт</string>
+    <string name="star_on_github">Поставить звезду на GitHub</string>
+    <string name="report_a_bug">Сообщить о баге на GitHub</string>
+    <string name="read_privacy">Прочесть \"Политику конфидециальности\"</string>
+    <string name="contribute">Форкнуть и сделать вклад</string>
+    <string name="slogan">\"Show me \'ur pictures, eternally!\"</string>
+    <string name="copyright_footer">Лицензия Apache 2.0 © 2024 Egor Bron</string>
+    <string name="dismiss_dialog">Скрыть</string>
+    <string name="apply_action">ОК</string>
+    <string name="remove_action">Удалить</string>
+    <string name="send_image_dialog">Отправить изображение</string>
+    <string name="send_image_dialog_subject">Изображение из Smupe!</string>
+    <string name="send_image_dialog_message">Смотри-ка, что я нашёл в Smupe!</string>
+    <string name="error_no_internet_connection">Нет подключения к интернету</string>
+    <string name="save">Сохранить</string>
+    <string name="share">Поделиться</string>
+    <string name="open_in_browser">Открыть</string>
+    <string name="favorite">В любимое</string>
+    <string name="switch_api_def">Сменить API-DEFы</string>
+    <string name="msg_fetching">Загрузка, пожалуйста, подождите…</string>
+    <string name="msg_downloading">Скачивание…</string>
+    <string name="msg_failed_download">Не удалось скачать…</string>
+    <string name="done">Готово!</string>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_menu_description">Открыть меню настроек</string>
+    <string name="settings_theme_and_colors">Тема и цвета</string>
+    <string name="settings_light_theme">Светлая</string>
+    <string name="settings_dark_theme">Тёмная</string>
+    <string name="settings_system_theme">Как в системе</string>
+    <string name="settings_dynamic_theme">Динамический цвет</string>
+    <string name="settings_menu_elements_order">Порядок элементов меню</string>
+    <string name="settings_action_swipe_to_save">Смахнуть для сохранения</string>
+    <string name="settings_action_swipe_to_save_description">Смахивание на действие будет сохранять ресурс вместо вызова меню действий</string>
+    <string name="settings_auto_saves">Автосохранение</string>
+    <string name="settings_auto_saves_description">Сохраняет ресурс в галерею при его появлении</string>
+    <string name="settings_appearance">Внешний вид</string>
+    <string name="settings_app_controls">Элементы управления</string>
+    <string name="settings_behaviour">Поведение</string>
+    <string name="settings_app_theme">Тема и цвета приложения</string>
+    <string name="settings_app_theme_description">Какую тему предпочтительней использовать</string>
+    <string name="settings_language">Язык</string>
+    <string name="settings_language_description">Сменить язык приложения</string>
+    <string name="settings_show_button_controls">Показать управляющие кнопки</string>
+    <string name="settings_show_button_controls_description">Показать управляющие кнопки на экране</string>
+    <string name="settings_reverse_image_controls">Развернуть направления смахиваний</string>
+    <string name="settings_reverse_image_controls_description">Меняет назначения сторон при смахивании по изображению</string>
+    <string name="settings_cache_capacity">Размер кэша (КБ)</string>
+    <string name="settings_cache_capacity_description">Размер кэша изображений в килобайтах</string>
+    <string name="settings_prefer_simple_share">Предпочитать простую отправку</string>
+    <string name="settings_prefer_simple_share_description">Предпочитать сообщение с простым текстом, а не файлы изображений при отправке</string>
+    <string name="settings_share_template">Текст диалога \"Поделиться\"</string>
+    <string name="settings_adult_mode">\"Взрослый\" режим</string>
+    <string name="settings_adult_mode_description">"(EXP) Показать API-DEFы, помеченные как запрещённые для детей\n "</string>
+    <string name="settings_international_mode">\"Международный\" режим</string>
+    <string name="settings_international_mode_description">"(TBD) Показать API-DEFы, помеченные как недоступные в некоторых странах.\nПримечание: эта настройка может быть удалена в будущем.\n "</string>
+    <string name="settings_proxy_server">Прокси-сервер</string>
+    <string name="settings_proxy_server_description">(TBD) Редактировать настройки прокси-сервера</string>
+    <string name="settings_bump_faves">Выгрузка данных</string>
+    <string name="settings_bump_faves_description">(TBD) Редактировать поведение резервного копирования контента</string>
+    <string name="settings_send_crash_logs">Отправлять отчёты о сбоях</string>
+    <string name="settings_send_crash_logs_description">(TBD) Позволяет вручную отсылать отчёты о сбоях разработчику при любой критической ошибке.</string>
+    <string name="settings_menu_elements_order_description">Редактировать порядок элементов в меню действия</string>
+    <string name="settings_lock_orientation">Блокировка ориентации</string>
+    <string name="settings_lock_orientation_description">Заблокировать ориентацию приложения как портретную.\nВнимание! Это может привести к проблемам на некоторых экранах!</string>
+    <string name="settings_share_template_description">Редактировать шаблон текста \"Поделиться\"</string>
+</resources>

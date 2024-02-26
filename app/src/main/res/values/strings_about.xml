@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Title of About screen and card -->
+    <string name="about_title">About</string>
+    <!-- Description for About card -->
+    <string name="about_menu_description">Read about the app</string>
+
+    <string name="credits_created_by">Created by %1$s with 😺 and 💖</string>
+    <string name="visit_website">Visit website</string>
+    <string name="star_on_github">Star the app on GitHub</string>
+    <string name="report_a_bug">Report a bug on GitHub</string>
+    <string name="read_privacy">Read Privacy policy</string>
+    <string name="contribute">Fork and contribute</string>
+    <string name="slogan">\"Show me \'ur pictures, eternally!\"</string>
+</resources>

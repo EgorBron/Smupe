@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Title of Favourites screen and card -->
+    <string name="favorites_title">Favorites</string>
+    <!-- Description for Favourites card -->
+    <string name="favorites_menu_description">Open favorites menu</string>
+
+    <string name="no_images">No images!</string>
+
+    <string name="msg_added_to_favorites">Added to favorites</string>
+
+    <string name="msg_removed_from_favorites">Removed from favorites</string>
+</resources>

@@ -1,0 +1,126 @@
+# API-DEFs reference
+
+`API-DEF` is stands for "API definition". It's a JSON document that describes the API.
+
+The main purpose of `Smupe!` creation is it's ability to provide custom image sources.
+
+I decided to use a JSON documents to define them, and after process inside and alongside the app.
+
+This "module" got a strange name `API-DEFs`, ~~but who matters?~~
+
+API-DEF JSON is basically used to:
+
+* retrieve API links and make requests to them
+* define simple schema of each response, at least to get target image
+* apply ~~all~~ some of HTTP protocol mess to it
+* connect some features of the app with the API response (like Blurhash, Search, Tags)
+
+## API-DEF schema
+
+API-DEF is hidden in app files. As a end user, you proably should not matter about
+it's schema. But when you're decided to create own API-DEF, you should
+follow the schema below.
+
+### In-app editor fields
+
+This section mentions in-app API-DEF editor and compares input fields to technical name and its values.
+
+References:
+* [BasicApiDef.kt](https://github.com/EgorBron/Smupe/blob/master/app/src/main/java/net/blusutils/smupe/data/image_sources/models/sources/BaseImageSource.kt)
+* [JsonRepository.kt](https://github.com/EgorBron/Smupe/blob/master/app/src/main/java/net/blusutils/smupe/data/image_sources/repository/JsonRepository.kt)
+
+#### Root object
+
+| Field name | Readable JSON name | Description |
+| --- | --- | --- |
+| API name | `name` | Name of the API |
+| Icon | `icon` | Link or resource ID of the API icon |
+| Description of API | `description` | -//- |
+| Link to API | `link` | Link to the API base |
+| API path | `path` | API path to request the image |
+| Path to image | `data_path` | JSON path to fetch image URL from response |
+| Path to image ID | `id_path` | JSON path to fetch image ID from response |
+| Path delimiter | `path_delimiter` | Delimiter of the JSON pathes (comma by default) |
+| Authorization | `authorization` | Authorization info (see `Authorization` table below) |
+| Search | `search` | Search info (see `Search` table below) |
+| Blurhash | `blurhash` | Blurhash info (see `Blurhash` table below) |
+| Tags | `tags` | Tags info (see `Tags` table below) |
+| Extras | `extra` | RESERVED: Extra info |
+
+#### Search
+
+This section describes `Search` field.
+
+| Field name | Readable JSON name | Description |
+| --- | --- | --- |
+| Is search available | `is_search` | -//- |
+| Search endpoint in API | `search_url` | -//- |
+| Path to image in search results | `search_path` | JSON path to fetch search results from response |
+| Path to image id in search results | `search_id_path` | JSON path to fetch search result ID from response |
+
+#### Authorization
+
+This section describes `Authorization` field.
+
+| Field name | Readable JSON name | Description |
+| --- | --- | --- |
+| Auth type | `auth_type` | Type of the API authentication |
+| Auth payload | `auth_payload` | Payload of the API authentication |
+
+#### Blurhash
+
+This section describes `Blurhash` field.
+
+| Field name | Readable JSON name | Description |
+| --- | --- | --- |
+| Is blurhash available | `is_blurhash` | -//- |
+| Path to image blurhash | `blurhash_path` | JSON path to fetch blurhash from response |
+
+#### Tags
+
+This section describes `Tags` field.
+
+| Field name | Readable JSON name | Description |
+| --- | --- | --- |
+| Is tags available | `is_tags` | -//- |
+| Path to image tags | `tags_path` | JSON path to fetch tags from response |
+
+### Readable schema
+
+```js
+{
+    "name": "API", // name of the API
+    "description": "An API", // description of the API
+    "icon": "http://example.com/a.png", // link or resoirce ID of the API icon
+    "link": "http://api.example.com/", // link to the API
+    "path": "/image/get", // path to get the image resource
+    "data_path": "results,~,url", // JSON path to fetch image URL from response
+    "id_path": "results,~,id", // JSON path to fetch image ID from response
+    "path_delimiter": ",", // delimiter of the JSON pathes
+    "search": { // search info
+        "is_search": true, // is search enabled
+        "search_url": "/image/search", // link to the search API
+        "search_path": "results,~,url", // JSON path to fetch search results from response
+        "search_id_path": "results,~,id" // JSON path to fetch search result ID from response
+    },
+    "authorization": { // authorization info
+        "auth_type": "bearer", // type of the API authentication
+        "auth_payload": "Key12345" // payload for the API authentication
+    },
+    "blurhash": { // blurhash info
+        "is_blurhash": true, // is blurhash enabled
+        "blurhash_path": "results,~,blurhash" // JSON path to fetch blurhash from response
+    },
+    "tags": { // tags info
+        "is_tags": true, // is tags enabled
+        "tags_path": "results,~,tags" // JSON path to fetch tags from response
+    },
+    "extra": {
+        // RESERVED: Extra info
+    }
+}
+```
+
+### Compact schema (should be minified)
+
+Compact Schema is currently not implemented.

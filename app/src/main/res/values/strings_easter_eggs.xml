@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="egg_what">WHAT</string>
+    <string name="egg_wait">WAIT</string>
+    <string name="egg_how">HOW</string>
+    <string name="egg_no_way">NO WAY</string>
+    <string name="dumplings">Hey, curious man!\n\nToday you found something cool, I promise.\n\nYou\'ll discover how to cook up delicious fried meat dumplings!\n\n
+Ingredients:\n\n
+* 300g meat dumplings\n
+* Spices of your choice (black pepper is essential)\n
+* Cooking oil (sunflower seed, olive, or another variety)\n
+* Frying pan\n\n\n
+Instructions:\n\n
+* Place the pan on the stovetop and add some oil. Let it heat up while you prepare the sauce.\n
+* Whip up your \"special sauce\": Mix and match pepper, salt, herbs, and any other desired ingredients with a drizzle of oil.\n
+* Once the oil is hot, carefully add the dumplings to the pan. Let them cook for 3 minutes.\n
+* Pour the \"special sauce\" evenly over the dumplings, gently stirring them to coat.\n
+* Cook for an additional 5-10 minutes, depending on the size and thickness of your dumplings. Smaller dumplings and thinner dough will cook faster.\n
+* Turn off the heat and your delicious dumplings are ready to serve!
+</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Title of image sources screen and card -->
+    <string name="api_defs_title">API-DEFs</string>
+    <!-- Description for API-DEFs card -->
+    <string name="api_defs_menu_description">Add or edit image sources</string>
+
+</resources>

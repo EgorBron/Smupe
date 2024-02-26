@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+option java_package = "net.blusutils.smupe";
+option java_multiple_files = true;
+
+enum Theme {
+  SYSTEM = 0;
+  LIGHT = 1;
+  DARK = 2;
+}
+
+message SmupeSettings {
+  reserved
+      1, // previously used by mistake
+      4, // language field
+      11, // cache capacity field
+      16, // international mode field
+      999; // previously used as a trick for saving app state
+
+  /* Appearance */
+  Theme themePreference = 2;
+  bool dynamicColorEnabled = 20; // don't be confused by this
+  int32 colorPreference = 3;
+//  string language = 4; // unused
+
+  /* Controls */
+  bool buttonsShown = 5;
+  bool controlsReversed = 6;
+  bool actionSwipeIsSave = 7;
+  bool autoSavesEnabled = 8;
+  string actionMenuElementsOrder = 9;
+
+  /* Behaviour */
+  bool orientationLocked = 10;
+//  unit64 cacheCapacityKB = 11; // unused
+  bool useCustomTabs = 12;
+  string savesDir = 13;
+  bool isSimpleSharePreferred = 14;
+  string shareTemplate = 21;
+  bool isAdultModeEnabled = 15;
+//  bool isInternationalModeEnabled = 16; // unused
+  ProxyServer proxy = 17;
+  BumpsApi bumps = 18;
+  bool crashReportsEnabled = 19;
+}
+
+enum ProxyType {
+  HTTP = 0;
+  SOCKS5 = 1;
+  SOCKS4 = 2;
+}
+
+message ProxyServer {
+  int32 id = 1;
+  string ip = 2;
+  int32 port = 3;
+  string auth = 4;
+  ProxyType proxyType = 5;
+}
+
+message BumpsApi {
+  bool isBumpEnabled = 1;
+  string apiLink = 2;
+  string token = 3;
+  bool faves = 4;
+  bool apiDefs = 5;
+  bool preferences = 6;
+}

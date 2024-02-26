@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="copyright" translatable="false">2024 Egor Bron</string>
+    <string name="creator_github" translatable="false">https://github.com/EgorBron/</string>
+    <string name="app_github" translatable="false">https://github.com/EgorBron/Smupe/</string>
+    <string name="app_website" translatable="false">https://smupe.vercel.app/</string>
+    <string name="creator_name" translatable="false">EgorBron</string>
+    <string name="bug_tracker" translatable="false">https://github.com/EgorBron/Smupe/issues/new/</string>
+    <string name="fork_link" translatable="false">https://github.com/EgorBron/Smupe/fork/</string>
+    <string name="privacy_policy" translatable="false">https://smupe.vercel.app/privacy/</string>
+    <string name="license" translatable="false">https://github.com/EgorBron/Smupe/blob/master/LICENSE.txt</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_greeting">Welcome to Smupe!</string>
+    <string name="welcome_swipe_tip">Swipe left to get next image</string>
+    <string name="welcome_actions_tip">Swipe right to open context menu</string>
+    <string name="welcome_favourite_tip">Tap twice to favourite image</string>
+    <string name="welcome_menu_tip">The action buttons will shown below</string>
+    <string name="welcome_skip">Skip</string>
+    <string name="welcome_pager_back">Back</string>
+    <string name="welcome_pager_next">Next</string>
+    <string name="welcome_start">Let\'s get started!</string>
+</resources>

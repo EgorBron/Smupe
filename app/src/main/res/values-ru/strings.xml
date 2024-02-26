@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="missing_permissions">Не все права выданы</string>
+    <string name="share_dialog">Смотри-ка, что нашлось в {app}\n{link}</string>
+    <string name="well_that_s_a_bug">Случилась ошибка!</string>
+    <string name="unhandled_error_dialog_message">Наш Котик-Баголов нашёл ошибку! И он очень зол!\nЧестно, мы не ожидали этого, так что сообщите нам об этой ошибке! Сделайте Котика счастливым!
+    </string>
+    <string name="error_represent">%1$s: ошибка.</string>
+    <string name="type_something">Напишите что-нибудь…</string>
+    <string name="search_in_current_api">Поиск в текущем API</string>
+    <string name="list_of_api_definitions">Список определений API</string>
+    <string name="add_api_type_of_api">Какой тип API Вы хотите добавить?</string>
+    <string name="add_api_remote_api">Удалённый API (из Интернета)</string>
+    <string name="add_api_local_directory">Локальная директория</string>
+    <string name="add_new_api">Добавить новый API</string>
+</resources>
