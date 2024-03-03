@@ -1,5 +1,8 @@
 package net.blusutils.smupe.util
 
+/**
+ * Helper object for identifying file types by their magic numbers.
+ */
 object MagicNumberIdentifier {
     @OptIn(ExperimentalUnsignedTypes::class)
     private val magicNumbers: Map<UByteArray, String> = mapOf(

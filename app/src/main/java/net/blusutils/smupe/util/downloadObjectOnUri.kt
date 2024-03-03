@@ -8,6 +8,12 @@ import android.util.Log
 import androidx.core.content.ContextCompat
 import java.io.File
 
+/**
+ * Download a file from an [Uri].
+ * @param path the path to save the file to.
+ * @param context the Android context to use.
+ * @throws IllegalArgumentException if [path] is null or empty.
+ */
 fun Uri.downloadObjectOnUri(path: String?, context: Context) {
     if (!path.isNullOrBlank()) {
         Log.d("Uri.downloadObjectOnUri", "$path")
@@ -21,5 +27,9 @@ fun Uri.downloadObjectOnUri(path: String?, context: Context) {
     } else throw IllegalArgumentException("path is null or empty")
 }
 
+/**
+ * Download a file from an [Uri] (and save to [File]).
+ * @see [downloadObjectOnUri]
+ */
 fun Uri.downloadObjectOnUri(path: File, context: Context) =
     this.downloadObjectOnUri(path.path, context)

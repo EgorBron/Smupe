@@ -53,7 +53,7 @@ fun FavesScreen(closeFavorites: () -> Unit = {}) {
 
     val settings by ctx.settingsDataStore.data.collectAsState(
         SettingsProtobufSerializer.defaultValue)
-    val storagePermission = rememberMultiplePermissionsState(perms)
+    val storagePermission = rememberMultiplePermissionsState(ctx.globalAppPermissions)
 
     val screenWidth = configuration.screenWidthDp.dp
 

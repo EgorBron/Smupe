@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import net.blusutils.smupe.R
 import net.blusutils.smupe.data.licenses.License
-import net.blusutils.smupe.data.repos.LicensesRepo.licenses
+import net.blusutils.smupe.data.licenses.LicensesRepo.licenses
 import net.blusutils.smupe.util.openLink
 
 

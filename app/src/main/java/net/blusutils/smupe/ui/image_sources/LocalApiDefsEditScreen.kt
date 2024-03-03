@@ -2,7 +2,6 @@ package net.blusutils.smupe.ui.image_sources
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -25,7 +24,7 @@ import net.blusutils.smupe.data.image_sources.ApiDefFileWrapper
 import net.blusutils.smupe.data.image_sources.CurrentApiDefParams
 import net.blusutils.smupe.data.image_sources.models.sources.LocalImageSource
 import net.blusutils.smupe.data.image_sources.repository.LocalRepository
-import net.blusutils.smupe.util.perms
+import net.blusutils.smupe.util.globalAppPermissions
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalPermissionsApi::class)
 @Preview
@@ -49,7 +48,7 @@ fun LocalApiDefsEditScreen(src: LocalImageSource? = null, close: () -> Unit = {}
         }
     }
 
-    val storagePermission = rememberMultiplePermissionsState(perms)
+    val storagePermission = rememberMultiplePermissionsState(ctx.globalAppPermissions)
 
     var source by remember { mutableStateOf<LocalRepository?>(null) }
     var storageAvailable by rememberSaveable { mutableStateOf(false) }

@@ -18,6 +18,7 @@ import kotlinx.coroutines.launch
 import net.blusutils.smupe.R
 import net.blusutils.smupe.data.proto_datastore.SettingsProtobufSerializer
 import net.blusutils.smupe.data.proto_datastore.settingsDataStore
+import net.blusutils.smupe.ui.settings.SettingsCard
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -273,7 +274,7 @@ private fun ActionSwipeToSaveCard() {
         stringResource(R.string.settings_action_swipe_to_save),
         stringResource(R.string.settings_action_swipe_to_save_description),
         Icons.Default.SwipeRight,
-        onClick = { onChange(!swipeToSave) },
+        onClick = { /*onChange(!swipeToSave)*/ },
         chip = { TBDChip() }
     ) {
         Switch(
@@ -306,7 +307,7 @@ private fun AutoSavesCard() {
         stringResource(R.string.settings_auto_saves),
         stringResource(R.string.settings_auto_saves_description),
         Icons.Default.SaveAlt,
-        onClick = { onChange(!autoSaves) },
+        onClick = { /*onChange(!autoSaves)*/ },
         chip = { TBDChip() }
     ) {
         Switch(
@@ -550,12 +551,13 @@ private fun EnableCrashReportsCard() {
         stringResource(R.string.settings_send_crash_logs),
         stringResource(R.string.settings_send_crash_logs_description),
         Icons.Default.BugReport,
-        onClick = { onChange(!enableCrashReports) },
+        onClick = { /*onChange(!enableCrashReports)*/ },
         chip = { TBDChip() }
     ) {
         Switch(
             checked = enableCrashReports,
-            onCheckedChange = onChange
+            onCheckedChange = onChange,
+            enabled = false
         )
     }
 }

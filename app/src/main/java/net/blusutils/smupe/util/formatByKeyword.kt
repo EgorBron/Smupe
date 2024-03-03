@@ -1,5 +1,11 @@
 package net.blusutils.smupe.util
 
+/**
+ * Simply format a string with given keywords map.
+ * @param values the keyword map
+ * @param strict if true, throw exception when missing value for keyword
+ * @return the formatted string
+ */
 fun String.formatByKeywords(values: Map<String, Any?>, strict: Boolean = false): String {
     val regex = "\\{(.*?)\\}".toRegex()
     return regex.replace(this) { matchResult ->

@@ -10,12 +10,12 @@ import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
@@ -23,8 +23,27 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import kotlinx.coroutines.launch
 import net.blusutils.smupe.R
-import net.blusutils.smupe.ui.misc.CardButton
-import net.blusutils.smupe.ui.misc.TwoLineText
+
+@Composable
+fun MenuCard(
+    onClick: () -> Unit,
+    upperText: Int,
+    bottomText: Int,
+    icon: ImageVector,
+    iconDescription: String? = null
+) {
+    Card(onClick = onClick, modifier = Modifier.padding(vertical = 8.dp)) {
+        ListItem(
+            modifier = Modifier.padding(8.dp),
+            headlineContent = { Text(stringResource(upperText)) },
+            supportingContent = { Text(stringResource(bottomText)) },
+            leadingContent = { Icon(icon, iconDescription) },
+            colors = ListItemDefaults.colors(
+                containerColor = MaterialTheme.colorScheme.primaryContainer,
+            )
+        )
+    }
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -72,47 +91,43 @@ fun MainModalFlyout(
 
             LazyColumn(
                 modifier = Modifier
-                    .padding(16.dp)
+                    .padding(36.dp)
                     .zIndex(2f)
             ) {
                 item {
-                    CardButton(onClick = { stateHoist(onFavesOpen) }) {
-                        Icon(Icons.Default.FavoriteBorder, null, Modifier.padding(4.dp, 0.dp, 16.dp, 0.dp))
-                        TwoLineText(
-                            stringResource(R.string.favorites_title),
-                            stringResource(R.string.favorites_menu_description)
-                        )
-                    }
+                    MenuCard(
+                        onClick = { stateHoist(onFavesOpen) },
+                        upperText = R.string.favorites_title,
+                        bottomText = R.string.favorites_menu_description,
+                        icon = Icons.Default.FavoriteBorder
+                    )
                 }
 
                 item {
-                    CardButton(onClick = { stateHoist(onApiDefsOpen) }) {
-                        Icon(Icons.Default.Api, null, Modifier.padding(4.dp, 0.dp, 16.dp, 0.dp))
-                        TwoLineText(
-                            stringResource(R.string.api_defs_title),
-                            stringResource(R.string.api_defs_menu_description)
-                        )
-                    }
+                    MenuCard(
+                        onClick = { stateHoist(onApiDefsOpen) },
+                        upperText = R.string.api_defs_title,
+                        bottomText = R.string.api_defs_menu_description,
+                        icon = Icons.Default.Api
+                    )
                 }
 
                 item {
-                    CardButton(onClick = { stateHoist(onSettingsOpen) }) {
-                        Icon(Icons.Default.Settings, null, Modifier.padding(4.dp, 0.dp, 16.dp, 0.dp))
-                        TwoLineText(
-                            stringResource(R.string.settings_title),
-                            stringResource(R.string.settings_menu_description)
-                        )
-                    }
+                    MenuCard(
+                        onClick = { stateHoist(onSettingsOpen) },
+                        upperText = R.string.settings_title,
+                        bottomText = R.string.settings_menu_description,
+                        icon = Icons.Default.Settings
+                    )
                 }
 
                 item {
-                    CardButton(onClick = { stateHoist(onAboutOpen) }) {
-                        Icon(Icons.Default.Info, null, Modifier.padding(4.dp, 0.dp, 16.dp, 0.dp))
-                        TwoLineText(
-                            stringResource(R.string.about_title),
-                            stringResource(R.string.about_menu_description)
-                        )
-                    }
+                    MenuCard(
+                        onClick = { stateHoist(onAboutOpen) },
+                        upperText = R.string.about_title,
+                        bottomText = R.string.about_menu_description,
+                        icon = Icons.Default.Info
+                    )
                 }
             }
             HorizontalDivider(Modifier.padding(16.dp))

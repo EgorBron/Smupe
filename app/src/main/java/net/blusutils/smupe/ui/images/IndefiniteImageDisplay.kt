@@ -47,9 +47,8 @@ import net.blusutils.smupe.data.proto_datastore.settingsDataStore
 import net.blusutils.smupe.data.room.util.FavesUtil
 import net.blusutils.smupe.ui.misc.CenteredContainer
 import net.blusutils.smupe.ui.misc.CenteredRow
-import net.blusutils.smupe.ui.misc.ErrorRepr
+import net.blusutils.smupe.util.globalAppPermissions
 import net.blusutils.smupe.util.isInternetAvailable
-import net.blusutils.smupe.util.perms
 import net.blusutils.smupe.util.reorder
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalPermissionsApi::class)
@@ -68,7 +67,7 @@ fun IndefiniteImageDisplay(
     val ds by ctx.settingsDataStore.data.collectAsState(
         SettingsProtobufSerializer.defaultValue
     )
-    val storagePermission = rememberMultiplePermissionsState(perms)
+    val storagePermission = rememberMultiplePermissionsState(ctx.globalAppPermissions)
 
     var imageListStub = remember { mutableStateListOf<Any?>(0) }
     var isHeartVisible by rememberSaveable { mutableStateOf(false) }
@@ -123,7 +122,6 @@ fun IndefiniteImageDisplay(
                                         item.url,
                                         stringResource(R.string.send_image_dialog),
                                         stringResource(R.string.send_image_dialog_subject),
-                                        stringResource(R.string.send_image_dialog_message),
                                         CurrentApiDefParams.currentApi?.name ?: "<unknown API>"
                                     ),
                                     getOpenButtonTriple(ctx, item.url?.toUri()),
@@ -186,14 +184,18 @@ fun IndefiniteImageDisplay(
                                                         Log.d("SubcomposeAsyncImage.Error", "$exc")
                                                         Column {
                                                             Icon(Icons.Default.WarningAmber, null)
-                                                            ErrorRepr(
-                                                                "SwipeableImage",
-                                                                CurrentApiDefParams.currentApi?.name,
+                                                            Text(stringResource(R.string.error_represent, "SwipeableImage"))
+                                                            if (!exc.message.isNullOrBlank()) {
+                                                                Log.d("SwipeableImage.Error", exc.message!!)
+                                                                Text(exc.message!!)
+                                                            }
+                                                            Text(
                                                                 if (exc is NullRequestDataException && !isInternetAvailable())
                                                                     stringResource(R.string.error_no_internet_connection)
-                                                                else "", // TODO fix here
-                                                                exc
+                                                                else
+                                                                    ""
                                                             )
+                                                            CurrentApiDefParams.currentApi?.name?.let { Text(it) }
                                                         }
                                                     },
                                                     success = {

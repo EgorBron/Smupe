@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import net.blusutils.smupe.R
 import net.blusutils.smupe.data.licenses.License
 import net.blusutils.smupe.data.licenses.LicenseInResources
-import net.blusutils.smupe.data.repos.LicensesRepo
+import net.blusutils.smupe.data.licenses.LicensesRepo
 import net.blusutils.smupe.util.openLink
 
 

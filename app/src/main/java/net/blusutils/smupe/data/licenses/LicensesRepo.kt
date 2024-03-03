@@ -1,8 +1,6 @@
-package net.blusutils.smupe.data.repos
+package net.blusutils.smupe.data.licenses
 
 import net.blusutils.smupe.R
-import net.blusutils.smupe.data.licenses.LicenseInResources
-import net.blusutils.smupe.data.licenses.LicensedObject
 
 // Never ever do like this
 object LicensesRepo {

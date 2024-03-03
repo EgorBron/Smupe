@@ -19,10 +19,7 @@ import net.blusutils.smupe.data.image_sources.repository.Gallery
 import net.blusutils.smupe.ui.about.AboutScreen
 import net.blusutils.smupe.ui.about.WelcomeScreen
 import net.blusutils.smupe.ui.favorites.FavesScreen
-import net.blusutils.smupe.ui.image_sources.AddInternetApiDef
-import net.blusutils.smupe.ui.image_sources.ApiDefsEditList
-import net.blusutils.smupe.ui.image_sources.ApiDefsSelectorFlyout
-import net.blusutils.smupe.ui.image_sources.LocalApiDefsEditScreen
+import net.blusutils.smupe.ui.image_sources.*
 import net.blusutils.smupe.ui.images.IndefiniteImageDisplay
 import net.blusutils.smupe.ui.settings.SettingsMenu
 
@@ -68,19 +65,19 @@ fun App() {
 //                        }
 //                    }
 //                    SmupeImageDisplay(
-                      IndefiniteImageDisplay(
-                          img = suspend {
+                    IndefiniteImageDisplay(
+                        img = suspend {
                             CurrentApiDefParams.currentApi = CurrentApiDefParams.currentApi
-                                ?:
-                                if (CurrentApiDefParams.dynamicRepos.isEmpty())
-                                        Gallery
+                                ?: if (CurrentApiDefParams.dynamicRepos.isEmpty())
+                                    Gallery
                                 else
-                                    // TODO: instead of random use persistent storage
+                                // TODO: instead of random use persistent storage
                                     CurrentApiDefParams.dynamicRepos.random()
                             val obj =
                                 if (CurrentApiDefParams.currentSearchQuery.isNotBlank()
-                                && CurrentApiDefParams.currentApi!!.search != null
-                                && CurrentApiDefParams.currentApi!!.search!!.supported)
+                                    && CurrentApiDefParams.currentApi!!.search != null
+                                    && CurrentApiDefParams.currentApi!!.search!!.supported
+                                )
                                     CurrentApiDefParams.currentApi!!.searchAsync(CurrentApiDefParams.currentSearchQuery)
                                 else
                                     CurrentApiDefParams.currentApi?.requestAsync()
@@ -100,6 +97,12 @@ fun App() {
                 ApiDefsEditList(navController) {
                     navController.navigate("imageView")
                     shouldApiDefsFlyoutBeVisible = true
+                }
+            }
+
+            composable("apiDefsSettings") {
+                ApiDefSettings {
+                    navController.navigate("imageView")
                 }
             }
 
@@ -155,10 +158,14 @@ fun App() {
         if (shouldApiDefsFlyoutBeVisible)
             ApiDefsSelectorFlyout(
                 shouldApiDefsFlyoutBeVisible,
-                setApiDefFlyoutState
+                setApiDefFlyoutState,
+                {
+                    shouldApiDefsFlyoutBeVisible = false
+                    navController.navigate("apiDefsEditList")
+                }
             ) {
                 shouldApiDefsFlyoutBeVisible = false
-                navController.navigate("apiDefsEditList")
+                navController.navigate("apiDefsSettings")
             }
 
 

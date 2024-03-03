@@ -20,6 +20,7 @@ import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -27,14 +28,14 @@ import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
 import net.blusutils.smupe.R
 import net.blusutils.smupe.data.image_sources.CurrentApiDefParams
-import net.blusutils.smupe.ui.misc.TwoLineText
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ApiDefsSelectorFlyout(
     visibility: Boolean = false,
     visibilityHoist: (Boolean) -> Unit,
-    showEditScreen: () -> Unit
+    showEditScreen: () -> Unit,
+    showSettingsScreen: () -> Unit
 ) {
     val coroutineScope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState()
@@ -84,7 +85,7 @@ fun ApiDefsSelectorFlyout(
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(16.dp)
                 )
-                IconButton({}) { Icon(Icons.Default.Settings, "") }
+                IconButton({ showSettingsScreen() }) { Icon(Icons.Default.Settings, "") }
             }
             OutlinedTextField(
                 search,
@@ -100,8 +101,19 @@ fun ApiDefsSelectorFlyout(
                 enabled = searchEnabled,
                 placeholder = { Text(stringResource(R.string.type_something)) },
                 supportingText = { Text(stringResource(R.string.search_in_current_api)) },
-                leadingIcon = { IconButton(searchInner) { Icon(Icons.Default.ImageSearch, "Search icon") } },
-                trailingIcon = { if (search != "") IconButton({ search = "" }) { Icon(Icons.Default.Close, "Erase text in search field") } },
+                leadingIcon = {
+                    IconButton(searchInner) {
+                        Icon(Icons.Default.ImageSearch, "Search icon")
+                    }
+                },
+                trailingIcon = {
+                    if (search != "")
+                        IconButton(
+                            { search = "" }
+                        ) {
+                            Icon(Icons.Default.Close, "Erase text in search field")
+                        }
+               },
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                 keyboardActions = KeyboardActions(onSearch = { searchInner() }),
                 singleLine = true
@@ -133,12 +145,25 @@ fun ApiDefsSelectorFlyout(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             AsyncImage(it.icon, "${it.name} icon")
-                            TwoLineText(it.name, it.description)
+                            Column {
+                                Text(
+                                    it.name,
+                                    style = MaterialTheme.typography.labelLarge,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                it.description?.let {
+                                    Text(
+                                        it,
+                                        style = MaterialTheme.typography.bodySmall
+                                    )
+                                }
+                            }
                         }
                     }
                     if (curentApi == it.name)
                         Card(onClick, modifier) { content() }
-                    else OutlinedCard(onClick, modifier) { content() }
+                    else
+                        OutlinedCard(onClick, modifier) { content() }
                 }
             }
         }

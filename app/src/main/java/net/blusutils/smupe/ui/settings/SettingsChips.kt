@@ -1,6 +1,7 @@
 package net.blusutils.smupe.ui.settings
 
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 
@@ -9,7 +10,10 @@ fun SettingsChip(
     text: String
 ) {
    FilterChip(true, onClick = { /*TODO*/ }, label = {
-       Text(text)
+       Text(
+           text,
+           style = MaterialTheme.typography.labelSmall
+       )
    })
 }
 
@@ -17,4 +21,4 @@ fun SettingsChip(
 fun BetaChip() = SettingsChip("BETA")
 
 @Composable
-fun TBDChip() = SettingsChip("ToBeDone")
+fun TBDChip() = SettingsChip("TBD")
